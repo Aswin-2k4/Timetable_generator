@@ -41,6 +41,8 @@ if st.button("Generate"):
         slots_per_day=[class_total[i:i+len(slots)] for i in range(0,len(class_total),len(slots))] #filtering classes for a day
         time_table=pd.DataFrame(slots_per_day,columns=slots)
         time_table.index=['MON','TUE','WED','THU','FRI']
+        st.write("Timetable successfully generated")
         st.table(time_table)
+
 
 
